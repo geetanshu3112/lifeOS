@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LifeOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+🌌 LifeOS
+</div>
+
+
+
+<ul class="menu">
+
+
+<li class="active" data-target="dashboard">
+🏠 Dashboard
+</li>
+
+
+<li data-target="tasks">
+✅ Tasks
+</li>
+
+
+<li data-target="study">
+📚 Study
+</li>
+
+
+<li data-target="goals">
+🎯 Goals
+</li>
+
+
+<li data-target="notes">
+📒 Notes
+</li>
+
+
+<li data-target="focus">
+⏱ Focus
+</li>
+
+
+<li data-target="expenses">
+💰 Expenses
+</li>
+
+
+<li data-target="settings">
+⚙ Settings
+</li>
+
+
+</ul>
+
+
+
+
+<div class="profile">
+
+👤
+
+<div>
+
+<h4 id="profileName">
+User
+</h4>
+
+
+<p id="profileRole">
+Life Creator
+</p>
+
+
+</div>
+
+</div>
+
+
+</aside>
+
+
+
+
+
+
+<!-- MAIN -->
+
+
+<main class="main" id="dashboard">
+
+
+
+<div class="topbar">
+
+
+<h2>
+Dashboard
+</h2>
+
+
+
+<button id="themeBtn">
+🌙 Theme
+</button>
+
+
+</div>
+
+
+
+<p>
+Your personal productivity space
+</p>
+
+
+
+
+
+<!-- DASHBOARD CARDS -->
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+📚 Study
+</h3>
+
+<p>
+Learning Hours
+</p>
+
+<h2 id="studyCount">
+0
+</h2>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+✅ Tasks
+</h3>
+
+<p>
+Total Tasks
+</p>
+
+<h2 id="taskCount">
+0
+</h2>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+🎯 Goals
+</h3>
+
+<p>
+Active Goals
+</p>
+
+<h2 id="goalCount">
+0
+</h2>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+💰 Expense
+</h3>
+
+<p>
+Total Spending
+</p>
+
+<h2>
+₹<span id="expenseCount">
+0
+</span>
+</h2>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PRODUCTIVITY -->
+
+
+<div class="progress-box">
+
+
+<h2>
+🔥 Today's Productivity
+</h2>
+
+
+
+<div class="progress-container">
+
+
+<div id="progressBar">
+
+</div>
+
+
+</div>
+
+
+
+<h3 id="progressText">
+0% Complete
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- WEEKLY STATS -->
+
+
+<div class="stats-box">
+
+
+<h2>
+📊 Weekly Overview
+</h2>
+
+
+
+<div class="stats-grid">
+
+
+
+<div class="stat-card">
+
+<h3>
+🔥 Streak
+</h3>
+
+<h2 id="streakCount">
+0 Days
+</h2>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h3>
+✅ Completed
+</h3>
+
+<h2 id="completedCount">
+0
+</h2>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h3>
+⏱ Focus Time
+</h3>
+
+<h2 id="focusCount">
+0 min
+</h2>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- TASK MANAGER -->
+
+
+<div class="task-box" id="tasks">
+
+
+<h2>
+✅ Daily Tasks
+</h2>
+
+
+
+
+<div class="task-input">
+
+
+
+<input
+type="text"
+id="taskInput"
+placeholder="Write your task...">
+
+
+
+<select id="taskPriority">
+
+
+<option value="Low">
+🟢 Low
+</option>
+
+
+<option value="Medium">
+🟡 Medium
+</option>
+
+
+<option value="High">
+🔴 High
+</option>
+
+
+</select>
+
+
+
+<input
+type="date"
+id="taskDate">
+
+
+
+<button id="addTask">
+Add
+</button>
+
+
+
+</div>
+
+
+
+
+<ul id="taskList">
+
+</ul>
+
+
+
+
+
+<div class="task-filter">
+
+
+<button id="allTasks">
+All
+</button>
+
+
+<button id="completedTasks">
+Completed
+</button>
+
+
+<button id="pendingTasks">
+Pending
+</button>
+
+
+</div>
+
+
+
+</div>
+<!-- FOCUS TIMER -->
+
+
+<div class="timer-box" id="focus">
+
+
+<h2>
+⏱ Focus Timer
+</h2>
+
+
+
+<div id="timer">
+25:00
+</div>
+
+
+
+<div class="timer-buttons">
+
+
+<button id="startTimer">
+▶ Start
+</button>
+
+
+<button id="pauseTimer">
+⏸ Pause
+</button>
+
+
+<button id="resetTimer">
+🔄 Reset
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- NOTES -->
+
+
+<div class="notes-box" id="notes">
+
+
+<h2>
+📒 My Notes
+</h2>
+
+
+
+
+<textarea
+id="noteInput"
+placeholder="Write your thoughts...">
+</textarea>
+
+
+
+
+<button id="saveNote">
+💾 Save Note
+</button>
+
+
+
+<div id="notesList">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- EXPENSE TRACKER -->
+
+
+<div class="expense-box" id="expenses">
+
+
+<h2>
+💰 Expense Tracker
+</h2>
+
+
+
+
+<div class="expense-input">
+
+
+
+<input
+type="text"
+id="expenseName"
+placeholder="Expense name...">
+
+
+
+
+<input
+type="number"
+id="expenseAmount"
+placeholder="Amount">
+
+
+
+<button id="addExpense">
+Add
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div id="expenseList">
+
+</div>
+
+
+
+
+<h3 class="total">
+
+Total: ₹
+<span id="totalExpense">
+0
+</span>
+
+
+</h3>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- GOALS SYSTEM -->
+
+
+<div class="goal-box" id="goals">
+
+
+<h2>
+🎯 My Goals
+</h2>
+
+
+
+
+<div class="goal-input">
+
+
+
+<input
+type="text"
+id="goalInput"
+placeholder="Write your goal...">
+
+
+
+<input
+type="date"
+id="goalDate">
+
+
+
+<button id="addGoal">
+Add
+</button>
+
+
+
+</div>
+
+
+
+
+<div id="goalList">
+
+</div>
+
+
+
+
+</div>
+<!-- STUDY TRACKER -->
+
+
+<div class="study-box" id="study">
+
+
+<h2>
+📚 Study Tracker
+</h2>
+
+
+
+<div class="study-input">
+
+
+<input
+type="text"
+id="subjectInput"
+placeholder="Subject name...">
+
+
+
+<input
+type="number"
+id="studyHours"
+placeholder="Hours">
+
+
+
+<button id="addStudy">
+Add Study
+</button>
+
+
+
+</div>
+
+
+
+
+<div id="studyList">
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SETTINGS -->
+
+
+<div class="settings-box" id="settings">
+
+
+<h2>
+⚙ Settings
+</h2>
+
+
+
+<div class="settings-input">
+
+
+
+<input
+type="text"
+id="userName"
+placeholder="Enter your name">
+
+
+
+<input
+type="text"
+id="userRole"
+placeholder="Enter your role">
+
+
+
+<button id="saveProfile">
+
+Save Profile
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
